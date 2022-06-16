@@ -15,8 +15,8 @@ bindsym $mod+Return exec alacritty
 
 # 音量控制
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +10%   && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   -10%   && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   +5%   && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@   -5%   && $refresh_i3status
 bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@   toggle && $refresh_i3status
 bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -455,7 +455,7 @@ bindsym $mod+b        exec thunar
 # === 自动运行
 # ===============
 # exec        --no-startup-id nm-applet &
-exec        feh             --bg-fill $HOME/config/wallpapers/0.jpg
+exec        feh             --bg-fill $HOME/Pictures/wallpapers/0.jpg
 # exec        feh             --bg-fill $HOME/Pictures/wallpapers
 exec        --no-startup-id nitrogen  --restore; sleep 1; picom -CGb
 exec       --no-startup-id nitrogen  --restore; sleep 1; picom --experimental-backend
@@ -529,6 +529,9 @@ for_window [class="Steam"] floating enable
 for_window [class="Thunar"] floating enable, move position center
 for_window [class="icalingua"] floating enable
 for_window [class="lutris"] floating enable
-# for_window [class="窗口"] floating enable resize set 640 480, move right 330px,move down 70px
+for_window [class="org.jackhuang.hmcl.Launcher"] floating enable resize set 640 480, move right 330px,move down 70px
 # for_window [class="netease-cloud-music"] floating enable resize set 640 480, move right 330px,move down 0px
+
+for_window [class="jetbrains-studio"] floating enable, move position center
+
 ###***************** 结束自定义 *****************###
