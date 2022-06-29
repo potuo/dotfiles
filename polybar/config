@@ -35,7 +35,8 @@ bottom              = false
 ;淡入淡出效果
 dim-value           = 1.0
 enable-ipc          = true
-monitor             = ${env:MONITOR:eDP-1}
+monitor             = ${env:MONITOR:eDP-1-1}
+; monitor             = ${env:MONITOR:eDP-1}
 width               = 100%
 height              = 28
 ; offset-x = 1%
